@@ -1,0 +1,40 @@
+import type { Employee } from '../types/employee'
+
+export const seedEmployees: Employee[] = [
+  {
+    id: 'employee-1',
+    firstName: 'Jane',
+    lastName: 'Lévesque',
+    startDate: '2022-01-15',
+    department: 'Engineering',
+    dateOfBirth: '1992-04-18',
+    street: '12 Rue de la Paix',
+    city: 'Paris',
+    state: 'CA',
+    zipCode: '75002',
+  },
+  {
+    id: 'employee-2',
+    firstName: 'Martin',
+    lastName: 'Dupont',
+    startDate: '2021-09-10',
+    department: 'Marketing',
+    dateOfBirth: '1989-07-06',
+    street: '45 Avenue des Champs',
+    city: 'Lyon',
+    state: 'NY',
+    zipCode: '69001',
+  },
+  {
+    id: 'employee-3',
+    firstName: 'Sophie',
+    lastName: 'Bernard',
+    startDate: '2023-03-22',
+    department: 'Sales',
+    dateOfBirth: '1995-11-12',
+    street: '6 Rue du Port',
+    city: 'Marseille',
+    state: 'TX',
+    zipCode: '13001',
+  },
+]

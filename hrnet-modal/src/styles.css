@@ -1,0 +1,13 @@
+/*
+ * Declares Tailwind's standard layer order first, so importing this file before or after
+ * a Tailwind app stylesheet never puts the app's base (reset) layer above the utilities.
+ */
+@layer theme, base, components, utilities;
+
+/*
+ * Only the Tailwind theme variables and the utilities used by the modal are generated
+ * (no global reset), so the stylesheet works in projects that do not use Tailwind.
+ */
+@import 'tailwindcss/theme' layer(theme);
+@import 'tailwindcss/utilities' layer(utilities) source(none);
+@source './';
