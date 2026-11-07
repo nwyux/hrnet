@@ -64,7 +64,16 @@ The modal provides:
 
 ## Performance Comparison
 
-A Lighthouse audit (to be added at the repository root) compares the legacy jQuery version and the modern React version.
+Lighthouse audits (mobile, Slow 4G) compare the legacy jQuery version with the React production build, on the Create Employee page:
+
+| Category | jQuery | React |
+| --- | :---: | :---: |
+| Performance | 85 | **100** |
+| Accessibility | 89 | **91** |
+| Best Practices | 92 | **96** |
+| SEO | 90 | **91** |
+
+Largest Contentful Paint drops from 2.6 s to 1.5 s and Speed Index from 9.8 s to 1.5 s, mainly because the five render-blocking jQuery scripts loaded from CDNs are replaced by a single minified bundle.
 
 - [Lighthouse Comparison Matrix](../lighthouse_comparison.md): summary of findings and analysis
 - [jQuery Legacy Report (PDF)](../lighthouse-jquery.pdf): audit of the legacy application
