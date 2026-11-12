@@ -9,13 +9,18 @@ Accessible React confirmation modal, built for **HRnet** (WealthHealth) to repla
 - `role="dialog"` and `aria-modal="true"`; the title is the accessible name
 - Dark theme, styles shipped as one small CSS file (works with or without Tailwind)
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) **20.19 or later** (22 LTS recommended) and npm
+- A React project using **React 18 or later**
+- A bundler that handles CSS imports (Vite, Next.js, webpack…)
+- Recommended editor: [Visual Studio Code](https://code.visualstudio.com/)
+
 ## Installation
 
 ```bash
 npm install hrnet-modal-react-dark
 ```
-
-Requires React 18 or later.
 
 ## Usage
 
@@ -59,11 +64,16 @@ The modal is **controlled**: the parent keeps the `isOpen` state and `onClose` u
 
 ## Development
 
-The source lives in `src/`. The build (Vite library mode + TypeScript declarations) outputs to `dist/`:
+Source code: [github.com/nwyux/hrnet-modal](https://github.com/nwyux/hrnet-modal)
 
 ```bash
+git clone https://github.com/nwyux/hrnet-modal.git
+cd hrnet-modal
+npm install
 npm run build
 ```
+
+The source lives in `src/`. The build (Vite library mode + TypeScript declarations) outputs to `dist/`.
 
 `dist/index.js` is an ES module, `dist/style.css` holds the styles, `dist/*.d.ts` the types.
 

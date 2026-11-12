@@ -1,6 +1,6 @@
 {
   "name": "hrnet-modal-react-dark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Accessible React confirmation modal for HRnet (replacement for the jQuery jquery.modal plugin).",
   "type": "module",
   "main": "./dist/index.js",
@@ -28,9 +28,25 @@
     "react",
     "modal",
     "dialog",
-    "hrnet"
+    "popup",
+    "confirmation",
+    "hrnet",
+    "jquery-modal",
+    "typescript"
   ],
+  "author": "nwyux",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwyux/hrnet-modal.git"
+  },
+  "homepage": "https://github.com/nwyux/hrnet-modal#readme",
+  "bugs": {
+    "url": "https://github.com/nwyux/hrnet-modal/issues"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
