@@ -68,22 +68,22 @@ Lighthouse audits (mobile) compare the legacy jQuery version with the React prod
 
 | Category | jQuery | React |
 | --- | :---: | :---: |
-| Performance | 85 | **100** |
+| Performance | 94 | **100** |
 | Accessibility | 89 | **91** |
 | Best Practices | 92 | **96** |
 | SEO | 90 | **91** |
 
-The main content is displayed about one second sooner, mainly because jQuery and its plugins are replaced by a single minified bundle.
+The main content is displayed one second sooner, with 4 network requests instead of 12 and half the transferred data, mainly because jQuery and its plugins are replaced by a single minified bundle.
 
 - [Lighthouse Comparison Matrix](../lighthouse_comparison.md): summary of findings and analysis
-- [jQuery Legacy Report (PDF)](../lighthouse-jquery.pdf): audit of the legacy application
-- [React Modern Report (PDF)](../lighthouse-react.pdf): audit of the modernized application
+- jQuery legacy report: [JSON](../lighthouse-jquery.json) · [PDF](../lighthouse-jquery.pdf)
+- React report: [JSON](../lighthouse-react.json) · [PDF](../lighthouse-react.pdf)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20.19+ (22 LTS recommended)
 - npm or yarn
 
 ### Installation
