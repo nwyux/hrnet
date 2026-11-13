@@ -1,6 +1,6 @@
 {
   "name": "hrnet-modal-react-dark",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Accessible React confirmation modal for HRnet (replacement for the jQuery jquery.modal plugin).",
   "type": "module",
   "main": "./dist/index.js",
