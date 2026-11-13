@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
 import CreateEmployeePage from './pages/CreateEmployeePage'
 import EmployeeListPage from './pages/EmployeeListPage'
-import Modal from 'hrnet-modal-react-dark'
+import Modal, { type ModalTheme } from 'hrnet-modal-react-dark'
 
 function App() {
   const [isModalTestOpen, setIsModalTestOpen] = useState(false)
+  const [modalTheme, setModalTheme] = useState<ModalTheme>('light')
 
   return (
     <BrowserRouter>
@@ -19,13 +20,28 @@ function App() {
               <span className="text-lg font-black tracking-[0.14em] text-white sm:text-xl">HRNET</span>
             </div>
 
-            <button
-              type="button"
-              onClick={() => setIsModalTestOpen(true)}
-              className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-200 transition hover:border-sky-500 hover:text-sky-300"
-            >
-              Test modal
-            </button>
+            <div className="flex items-center gap-2">
+              <label htmlFor="modal-theme" className="sr-only">
+                Modal theme
+              </label>
+              <select
+                id="modal-theme"
+                value={modalTheme}
+                onChange={(event) => setModalTheme(event.target.value as ModalTheme)}
+                className="rounded-xl border border-slate-700 bg-slate-900 px-2 py-2 text-xs font-semibold text-slate-200"
+              >
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="brand">Brand</option>
+              </select>
+              <button
+                type="button"
+                onClick={() => setIsModalTestOpen(true)}
+                className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-200 transition hover:border-sky-500 hover:text-sky-300"
+              >
+                Test modal
+              </button>
+            </div>
           </div>
         </header>
 
@@ -71,7 +87,8 @@ function App() {
           isOpen={isModalTestOpen}
           onClose={() => setIsModalTestOpen(false)}
           title="Modal test"
-          description="This is a quick modal check to verify the component behavior and styling."
+          description={`This modal uses the "${modalTheme}" theme. Change it with the selector next to the button.`}
+          theme={modalTheme}
           actions={
             <button
               type="button"
